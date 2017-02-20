@@ -65,6 +65,7 @@ exports.configure = ({
   }
 
   if (process.env.GOOGLE_ID && process.env.GOOGLE_SECRET) {
+    console.log("GOOGLE", process.env.GOOGLE_ID)
     providers.push({
       provider: 'google',
       Strategy: require('passport-google-oauth').OAuth2Strategy,
